@@ -1,5 +1,5 @@
-Rails.application.routes.draw 
-  resources :contatcs
+Rails.application.routes.draw do
+  resources :contacts
   get '/about' => 'pages#about'
   root 'pages#home'
 
@@ -57,4 +57,5 @@ Rails.application.routes.draw
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
