@@ -1,4 +1,5 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw 
+  resources :contatcs
   get '/about' => 'pages#about'
   root 'pages#home'
 
