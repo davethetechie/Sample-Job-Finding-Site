@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160107213052) do
 
   create_table "plans", force: true do |t|
     t.string "name"
-    t.string "price"
+    t.decimal "price"
     t.string "timestamps"
   end
 
