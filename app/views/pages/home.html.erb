@@ -2,4 +2,22 @@
      <h1>Welcome to "Project Name"</h1>
      <h3>A site where local teens find small handy man jobs</h3>
 </div>
+     <div class="row">
+          <div class="col-md-6">
+               <div class="well">
+                    <h2 class="text-center">Looking for a job?</h2>
+                    <h4 class="text-center">Start searching today! </h4>
+                    <br/>
+                    <%= link_to "Create a profile", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+               </div>
+          </div>
+          <div class="col-md-6">
+               <div class="well">
+                    <h2 class="text-center">Pro membership</h2>
+                    <h4>Sign up for the pro account for $5/month and you instanly have the ability to post you job/project</h4>
+                    <%= link_to "Sign Up with Pro!", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+               </div>
+          </div>
+          
+     </div>
 
