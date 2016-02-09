@@ -1,3 +1,46 @@
-TEST
-
-<%= @variable %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1 class="text-center">Create Your Profile</h1>
+    <p class="text-center">Weather you're looking for work or looking to hire, it all starts here! Fill out the form accordingly</p>
+    <div class="well">
+      <%= form_for @profile, url: user_profile_path do |f| %>
+      
+        <div class="form-group">
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, class: 'form-control' %>
+        </div>
+         <div class="form-group">
+          <%= f.label :job_type %>
+          <%= f.select :job_type, ['Babysitter', 'Landscaper', 'Dog Walker', 'Tutor', 'Hiring' ], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :phone_number %>
+          <%= f.text_field :phone_number, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :contact_email %>
+          <%= f.text_field :contact_email, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :references %>
+          <%= f.text_area :references, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :prior_work %>
+          <%= f.text_field :prior_work, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description %>
+          <%= f.text_area :description, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Lets Do This!", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
