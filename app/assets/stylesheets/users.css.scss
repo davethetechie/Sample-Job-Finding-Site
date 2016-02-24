@@ -1,0 +1,45 @@
+.job_type_icon {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #CC0000;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #CC0000;
+    color: white;
+    text-align: center;
+}
+
+.well.profile-block {
+    color: #fff;
+    h3 {
+        margin-top: 0px;
+    }
+    -webkit-box-shadow: -2px 6px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 6px 10px 1px rgba(0,0,0,0.75);
+    box-shadow: -2px 6px 10px 1px rgba(0,0,0,0.75);
+}
+
+.well.profile-description {
+    background-color: #8DB255;
+    border-color: #8DB255;
+}
+
+.well.pro-goodies {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    
+}
+
+.well.extras {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.shadow {
+    -webkit-box-shadow: -2px 6px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 6px 10px 1px rgba(0,0,0,0.75);
+    box-shadow: -2px 6px 10px 1px rgba(0,0,0,0.75);
+}
+.round {
+    border-radius: 50%;
+}
