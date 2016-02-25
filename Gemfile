@@ -17,6 +17,8 @@ gem 'sass-rails', '4.0.3'
 # Use bootstrap lib for style
 gem 'bootstrap-sass', '3.3.1'
 
+gem 'autoprefixer-rails', '6.3.3'
+
 
 # Font awesome library icons
 gem 'font-awesome-sass', '4.2.0'
