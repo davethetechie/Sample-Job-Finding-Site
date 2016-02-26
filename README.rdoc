@@ -1,8 +1,5 @@
 == README
 
-Coder Man project app
-Subscription Based web app
-http//
 
 Things you may want to cover:
 
