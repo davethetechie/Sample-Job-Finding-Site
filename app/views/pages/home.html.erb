@@ -1,6 +1,8 @@
-<div class="jumbotron text-center">
+<div class="shadow jumbotron text-center spicy">
   <h1>Welcome to Site Name</h1>
-  <h3>Looking for some extra money? Looking for some help with the kids or some landscape work? </h3>
+  <h2><small class="spicy">Looking for some extra money? Looking for some help with the kids or some landscape work? </small></h2>
+  <%= link_to "I need a job", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary pull-right outline-buttons' %>
+  <%= link_to "Post a job", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success pull-left outline-buttons' %>
 </div>
 <div class="row">
   <% if user_signed_in? %>
@@ -8,36 +10,58 @@
       <div class="well">
         <h2 class="text-center">Your Profile</h2>
         <% if current_user.profile %>
-          <%= link_to "Fix up your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-success btn-lg btn-block' %>
-          <%= link_to "View your profile", user_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
+          <%= link_to "Fix up your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-success  btn-block' %>
+          <%= link_to "View your profile", user_path(current_user), class: 'btn btn-default  btn-block' %>
         <% else %>
           <p>Create your profile so you can get hired! Looking to hire? Well create your profile so youre clients can reach you!</p>
-          <%= link_to "Create your profile", new_user_profile_path(current_user), class: 'btn btn-default btn-lg btn-block'%>
+          <%= link_to "Create your profile", new_user_profile_path(current_user), class: 'btn btn-default' %>
         <% end %>
       </div>
     </div>
+    <% if current_user.plan_id == 2 %>
+       <div class="col-md-6">
+        <div class="well">
+          <h2 class="text-center">Post your Job! </h2>
+          <p>Need work to get done? Going out need a babysitter? Post your job and get help fast!</p>
+          <%= link_to "Get work done!", users_path, class: 'btn btn-info btn-block' %>
+        </div>
+      </div>
+    <% end %>
     <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">The Community</h2>
         <p>Take a look at other members and maybe you will find the right person to hire!</p>
-        <%= link_to "Find the right person!", users_path, class: 'btn btn-default btn-lg btn-block' %>
+        <%= link_to "Find the right person!", users_path, class: 'btn btn-default  btn-block' %>
       </div>
     </div>
   <% else %>
-    <div class="col-md-6">
-      <div class="well">
-        <h2 class="text-center">Basic Membership</h2>
-        <h4>Looking for a job? Sign up for free and reach local homeowners that need work done.</h4>
-        <br/>
-        <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+    <div class="col-md-6 ">
+      
+      <div class="well home-page shadow">
+        <h2 class="text-center ">How does "Site Name" Work? </h2>
       </div>
+      
     </div>
     <div class="col-md-6">
-      <div class="well">
-        <h2 class="text-center">Pro Membership</h2>
-        <h4>Sign up for the pro account for $10/year and get access to the local community and post the jobs you need done!</h4>
-        <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+      
+      <div class="well home-page shadow ">
+        <h2 class="text-center">How does "Site Name" Work? </h2>
       </div>
+      
+    </div>
+    <div class="col-md-6">
+      
+      <div class="well home-page shadow ">
+        <h2 class="text-center">How does "Site Name" Work? </h2>
+      </div>
+      
+    </div>
+    <div class="col-md-6">
+      
+      <div class="well home-page shadow ">
+        <h2 class="text-center">How does "Site Name" Work? </h2>
+      </div>
+      
     </div>
   <% end %>
 </div>
