@@ -1,0 +1,30 @@
+<% @jobs.each do |job| %>
+    
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <ul class="list-unstyled">
+               <% @jobs.each do |job| %>
+                    <li>
+                      <div class="well row <%= cycle('white-bg', '') %>">
+                        <div class="col-sm-4 text-center">
+                          <% if job.avatar %>
+                            <%= link_to job do %>
+                              <%= image_tag job.avatar.url(:thumb), class: 'user-index-avatar' %>
+                            <% end %>
+                          <% end %>
+                        </div>
+                        <div>
+                          <%= link_to job do %>
+                            <h2><%= job.title %> </h2>
+                          <% end %>
+                          <p><%= job.description %></p>
+                        </div>
+                      </div>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+
+    
+<% end %>

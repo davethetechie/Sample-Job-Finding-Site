@@ -11,12 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222173821) do
+ActiveRecord::Schema.define(version: 20160301152207) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "job_posts", force: true do |t|
+    t.string   "job_type"
+    t.string   "location"
+    t.string   "when"
+    t.string   "phone_number"
+    t.text     "description"
+    t.text     "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
+  create_table "jobs", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "name"
+    t.string   "url"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

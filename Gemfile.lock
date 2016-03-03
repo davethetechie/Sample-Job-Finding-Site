@@ -61,6 +61,8 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (4.2.0)
       sass (~> 3.2)
+    haml (4.0.7)
+      tilt
     hike (1.2.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -130,6 +132,9 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    simple_form (3.2.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     spring (1.6.3)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -172,6 +177,7 @@ DEPENDENCIES
   devise (= 3.4.1)
   figaro (= 1.0.0)
   font-awesome-sass (= 4.2.0)
+  haml (= 4.0.7)
   jbuilder (= 2.0)
   jquery-rails
   paperclip (= 4.3.5)
@@ -180,6 +186,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (= 4.0.3)
   sdoc (= 0.4.0)
+  simple_form (= 3.2.1)
   spring
   sqlite3
   stripe (= 1.16.1)

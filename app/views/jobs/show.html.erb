@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-3 text-center">
+        <span class="round"> <%= image_tag @job.avatar.url, class: 'user-show-avatar' %></span>
+    </div>
+    <div class="col-md-6">
+        <h1><%= @job.name %> needs a <%= @job.title %></h1> 
+        <div class="well">
+            <h3>Description</h3>
+            <%= @job.description %>
+        </div>
+        <%= link_to "Edit",  edit_job_path(@job), class: 'btn btn-success buttons-outline align-center' %>
+        <%= link_to "Delete",  job_path(@job), method: :delete, data: { confirm: "Are you sure? You cant un-due this."}, class: 'btn btn-success' %>
+         
+        
+        
+        
+        <% if current_user.plan_id == 2 %>
+        <% end %>
+    </div>
+</div>

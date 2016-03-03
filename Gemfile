@@ -54,6 +54,12 @@ gem 'paperclip', '4.3.5'
 # Use stripe to handle payments
 gem 'stripe', '1.16.1'
 
+# Use simple form for...well what do you think...forms
+
+gem 'simple_form', '3.2.1'
+
+gem 'haml',  '4.0.7'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt',  3.1.7'
 
