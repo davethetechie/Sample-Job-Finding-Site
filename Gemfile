@@ -72,3 +72,4 @@ gem 'haml',  '4.0.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem "bugsnag"
